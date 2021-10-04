@@ -6,15 +6,15 @@ public class Adventure {
 
     public static void main(String[] args) {
         // build all rooms
-        room1 = new Room("1", "INSERT ROOM DESCRIPTION HERE");
-        room2 = new Room("2", "INSERT ROOM DESCRIPTION HERE");
-        room3 = new Room("3", "INSERT ROOM DESCRIPTION HERE");
-        room4 = new Room("4", "INSERT ROOM DESCRIPTION HERE");
-        room5 = new Room("5", "INSERT ROOM DESCRIPTION HERE");
-        room6 = new Room("6", "INSERT ROOM DESCRIPTION HERE");
-        room7 = new Room("7", "INSERT ROOM DESCRIPTION HERE");
-        room8 = new Room("8", "INSERT ROOM DESCRIPTION HERE");
-        room9 = new Room("9", "INSERT ROOM DESCRIPTION HERE");
+        room1 = new Room("Entryway", "INSERT ROOM DESCRIPTION HERE");
+        room2 = new Room("Parlor", "INSERT ROOM DESCRIPTION HERE");
+        room3 = new Room("Kitchen", "INSERT ROOM DESCRIPTION HERE");
+        room4 = new Room("Dining Room", "INSERT ROOM DESCRIPTION HERE");
+        room5 = new Room("Vault", "INSERT ROOM DESCRIPTION HERE");
+        room6 = new Room("Smoking Room", "INSERT ROOM DESCRIPTION HERE");
+        room7 = new Room("Cupboard under the stairs", "INSERT ROOM DESCRIPTION HERE");
+        room8 = new Room("Boudoir", "INSERT ROOM DESCRIPTION HERE");
+        room9 = new Room("Basement", "INSERT ROOM DESCRIPTION HERE");
         //make all connections
         room2.setConnections(null, room3, null, room1);
         room4.setConnections(room1, null, room7, null);
@@ -29,6 +29,8 @@ public class Adventure {
         room7.setConnections(room4, room8, null, null);
         room8.setConnections(null, room9, null, room7);
         room9.setConnections(room6, null, null, room8);*/
+
+
         //set player starting position
         currentRoom = room1;
         boolean running = true;
