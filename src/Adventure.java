@@ -82,12 +82,12 @@ public class Adventure {
                 break;
             case "help":
             case "hlep":
-                System.out.println("INSERT HELP AND TIPS HERE, NUMBNUTS.");
+                System.out.println("to play the game you type 'go east/west/north/south' to move in that direction. to exit the game, type 'exit'.");
                 break;
             case "exit":
                 running = false;
             default:
-                System.out.println("Invalid command");
+                System.out.println("Invalid command, type 'help' for instructions");
                 break;
 
         }
