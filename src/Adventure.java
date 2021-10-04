@@ -82,7 +82,8 @@ public class Adventure {
                 break;
             case "help":
             case "hlep":
-                System.out.println("to play the game you type 'go east/west/north/south' to move in that direction. to exit the game, type 'exit'.");
+                System.out.println("to play the game you type 'go east/west/north/south' to move in that direction. to exit the game, type 'exit'." +
+                        "\n to have the description of the room repeated, type 'look' or 'look around'");
                 break;
             case "exit":
                 running = false;
