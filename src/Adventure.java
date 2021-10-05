@@ -14,7 +14,7 @@ public class Adventure {
         System.out.println("To get the instructions again, type 'help'.");
 
         // build all rooms
-        room1 = new Room("Entryway", "INSERT ROOM DESCRIPTION HERE");
+        room1 = new Room("Entryway", "The Ha");
         room2 = new Room("Parlor", "INSERT ROOM DESCRIPTION HERE");
         room3 = new Room("Kitchen", "INSERT ROOM DESCRIPTION HERE");
         room4 = new Room("Dining Room", "INSERT ROOM DESCRIPTION HERE");
