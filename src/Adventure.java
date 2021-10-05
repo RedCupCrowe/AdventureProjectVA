@@ -5,16 +5,10 @@ public class Adventure {
     private static Room room1, room2, room3,room4, room5, room6,room7, room8, room9;
 
     public static void main(String[] args) {
-        System.out.println("-----------------------------");
-        System.out.println("Welcome to the Haunted house!");
-        System.out.println("-----------------------------");
-        System.out.println();
-        System.out.println("to play the game you type 'go east/west/north/south' to move in that direction. To exit the game, type 'exit'." +
-            "\nTo have the description of the room repeated, type 'look' or 'look around'");
-        System.out.println("To get the instructions again, type 'help'.");
+
 
         // build all rooms
-        room1 = new Room("Entryway", "The Ha");
+        room1 = new Room("Cauldron Room", "The Ha");
         room2 = new Room("Parlor", "INSERT ROOM DESCRIPTION HERE");
         room3 = new Room("Kitchen", "INSERT ROOM DESCRIPTION HERE");
         room4 = new Room("Dining Room", "INSERT ROOM DESCRIPTION HERE");
@@ -28,7 +22,10 @@ public class Adventure {
         room4.setConnections(room1, null, room7, null);
         room6.setConnections(room3,null, room9, room5);
         room8.setConnections(null, room9, null, room7);
-       /* room1.setConnections(null, room2, room4, null);
+        //Above version has the connections made both ways at the same time,
+        // the commented out segment below is the 'manual' way of doing it.
+
+        /* room1.setConnections(null, room2, room4, null);
         room2.setConnections(null, room3, null, room1);
         room3.setConnections(null, null, room6, room2);
         room4.setConnections(room1, null, room7, null);
@@ -37,7 +34,13 @@ public class Adventure {
         room7.setConnections(room4, room8, null, null);
         room8.setConnections(null, room9, null, room7);
         room9.setConnections(room6, null, null, room8);*/
-
+        System.out.println("---------------------------");
+        System.out.println("Welcome to the portal maze!");
+        System.out.println("---------------------------");
+        System.out.println();
+        System.out.println("to play the game you type 'go east/west/north/south' to move in that direction. To exit the game, type 'exit'." +
+                "\nTo have the description of the room repeated, type 'look' or 'look around'");
+        System.out.println("To get the instructions again, type 'help'.");
 
         //set player starting position
         currentRoom = room1;
@@ -49,6 +52,7 @@ public class Adventure {
             case "go north":
             case "n":
             case "go n":
+            case "north":
                 if(currentRoom.getNorth() == null){
                     System.out.println("you slam your head into the wall");
                 }else{
@@ -58,6 +62,7 @@ public class Adventure {
             case "go south":
             case "s":
             case "go s":
+            case "south":
                 if(currentRoom.getSouth() == null){
                     System.out.println("you slam your head into the wall");
                 }else{
@@ -67,6 +72,7 @@ public class Adventure {
             case "go east":
             case "e":
             case "go e":
+            case "east":
                 if(currentRoom.getEast() == null){
                     System.out.println("you slam your head into the wall");
                 }else{
@@ -76,6 +82,7 @@ public class Adventure {
             case "go west":
             case "w":
             case "go w":
+            case "west":
                 if(currentRoom.getWest() == null){
                     System.out.println("you slam your head into the wall");
                 }else{
