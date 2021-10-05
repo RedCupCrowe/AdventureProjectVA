@@ -8,7 +8,8 @@ public class Adventure {
 
 
         // build all rooms
-        room1 = new Room("Cauldron Room", "The Ha");
+        room1 = new Room("Cauldron Room", "You are in a dark cave. In the middle, \" +\n" +
+                "        \"there is a cauldron boiling. With a clasp of thunder, three witches suddenly appear before you.");
         room2 = new Room("Parlor", "INSERT ROOM DESCRIPTION HERE");
         room3 = new Room("Kitchen", "INSERT ROOM DESCRIPTION HERE");
         room4 = new Room("Dining Room", "INSERT ROOM DESCRIPTION HERE");
@@ -38,7 +39,8 @@ public class Adventure {
         System.out.println("Welcome to the portal maze!");
         System.out.println("---------------------------");
         System.out.println();
-        System.out.println("to play the game you type 'go east/west/north/south' to move in that direction. To exit the game, type 'exit'." +
+        System.out.println("to play the game you type 'go north' to move in that direction, the same can be done for south, east and west " +
+                "\nTo exit the game, type 'exit'." +
                 "\nTo have the description of the room repeated, type 'look' or 'look around'");
         System.out.println("To get the instructions again, type 'help'.");
 

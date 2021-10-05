@@ -42,7 +42,7 @@ public class Room {
 
     public String toString(){
 
-        return this.name + ": " + this.roomDescription;
+        return this.roomDescription;
 
     }
     public void setSouth(Room south){
