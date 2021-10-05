@@ -9,7 +9,7 @@ public class Adventure {
 
         // build all rooms
         room1 = new Room("Cauldron Room", """
-                You are in a dark cave, the only light to see by comes from a bubbling cauldron.
+                You are in a dark cave, the only light to see by, comes from a bubbling cauldron.
                 To your east and to your south, you see large mirrors, or what seems to be mirrors at first.
                 The mirrors emit a faint humming sound and their reflections are blurry and out of sync with reality.
                 Upon closer inspection, they are not looking glasses at all, but portals!
@@ -44,12 +44,12 @@ public class Adventure {
                 """);
 
         room7 = new Room("Dormitory fever dream", """
-                 As you step through the portal, your head begins to spin.
-                 Even while disorientated, you look around to try and get your bearings.\s
-                 You find yourself at the outside door of a dormitory kitchen. Listening, you hear the Chef yelling, 'Stop!'\s
-                 'Stop!' while several cats inside seem to be serenading him with the Meow Mix commercial theme.
-                 Suddenly, the repeated thump of a cleaver puts an  abrupt end to the music.
-                 It seems you came at a bad time. You'd better leave.\s
+                As you step through the portal, your head begins to spin.
+                Even while disorientated, you look around to try and get your bearings.\s
+                You find yourself at the outside door of a dormitory kitchen. Listening, you hear the Chef yelling, 'Stop!'\s
+                'Stop!' while several cats inside seem to be serenading him with the Meow Mix commercial theme.
+                Suddenly, the repeated thump of a cleaver puts an  abrupt end to the music.
+                It seems you came at a bad time. You'd better leave.\s
                 """);
 
         room8 = new Room("Dormitory Kitchen", """
@@ -100,6 +100,8 @@ public class Adventure {
 
         //set player starting position
         currentRoom = room1;
+        System.out.println();
+        System.out.println(currentRoom);
         boolean running = true;
         Scanner in = new Scanner(System.in);
         while(running){
