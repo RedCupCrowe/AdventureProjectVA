@@ -5,6 +5,14 @@ public class Adventure {
     private static Room room1, room2, room3,room4, room5, room6,room7, room8, room9;
 
     public static void main(String[] args) {
+        System.out.println("-----------------------------");
+        System.out.println("Welcome to the Haunted house!");
+        System.out.println("-----------------------------");
+        System.out.println();
+        System.out.println("to play the game you type 'go east/west/north/south' to move in that direction. To exit the game, type 'exit'." +
+            "\nTo have the description of the room repeated, type 'look' or 'look around'");
+        System.out.println("To get the instructions again, type 'help'.");
+
         // build all rooms
         room1 = new Room("Entryway", "INSERT ROOM DESCRIPTION HERE");
         room2 = new Room("Parlor", "INSERT ROOM DESCRIPTION HERE");
