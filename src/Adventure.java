@@ -24,7 +24,7 @@ public class Adventure {
         room6.setConnections(room3,null, room9, room5);
         room8.setConnections(null, room9, null, room7);
         //Above version has the connections made both ways at the same time,
-        // the commented out segment below is the 'manual' way of doing it.
+        // the out-commented segment below is the 'manual' way of doing it.
 
         /* room1.setConnections(null, room2, room4, null);
         room2.setConnections(null, room3, null, room1);
