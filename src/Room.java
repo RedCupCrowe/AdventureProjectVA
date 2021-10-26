@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Room {
     private String name;
     private Room north;
@@ -5,12 +7,37 @@ public class Room {
     private Room east;
     private Room west;
     private String roomDescription;
+    private ArrayList<Item> roomItems;
 
 
     public Room(String name, String roomDescription){
         this.name = name;
         this.roomDescription = roomDescription;
+        roomItems = new ArrayList<>();
     }
+
+    public void addItem(Item item){
+        roomItems.add(item);
+    }
+
+    public Item takeItem(String itemName){
+        int index = -1;
+        for(int i=0; i<roomItems.size();i++){
+            if (roomItems.get(i).getName().equals(itemName)){
+                index = i;
+            }
+
+        }
+        if (index == -1){
+            return null;
+        }else{
+            Item result = roomItems.get(index);
+            roomItems.remove(result);
+            return result;
+        }
+    }
+
+
 
     public void setConnections(Room north, Room east, Room south , Room west){
         if(north != null)  {setNorth(north);}
@@ -41,9 +68,11 @@ public class Room {
     }
 
     public String toString(){
-
-        return this.roomDescription;
-
+        String result = this.roomDescription + "\nThe following items are scattered around the room:";
+        for (Item i: roomItems){
+            result += "\n-" + i.toString();
+        }
+        return result;
     }
     public void setSouth(Room south){
         this.south = south;
@@ -66,4 +95,5 @@ public class Room {
         if(west.getEast() != this){
         west.setEast(this);}
     }
+
 }
